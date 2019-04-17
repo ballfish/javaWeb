@@ -13,11 +13,11 @@ import javax.enterprise.context.SessionScoped;
 import repository.Car;
 import repository.CarRepositoryBean;
 
-/**
+/**carSelectionBean
  *
  * @author hychen39@gm.cyut.edu.tw
  */
-@Named(value = "carSelectionBean")
+@Named(value = "")
 @SessionScoped
 public class CarSelectionBean implements Serializable{
 
@@ -37,6 +37,19 @@ public class CarSelectionBean implements Serializable{
     public List<Car> getCars(){
         return repository.findAll();
     }
+    String carId;
     
+    public String getcarId(){
+        return carId;
+    }
+    
+    public void setcarId(String car){
+        this.carId = car;
+        
+    }
+    public Car getcar(){
+        System.out.print(carId);
+        return repository.query(Integer.valueOf(carId));
+    }
     
 }

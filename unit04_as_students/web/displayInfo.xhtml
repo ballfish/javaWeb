@@ -6,8 +6,11 @@
     <h:head>
         <title>Display Car Info</title>
     </h:head>
+    
     <h:body>
-       TBD
+        #{carSelectionBean.car.name}
+        #{carSelectionBean.car.manufacturer}
+        <h:graphicImage name="#{carSelectionBean.car.img_uri}" />
     </h:body>
 </html>
 

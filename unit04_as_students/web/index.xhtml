@@ -9,9 +9,8 @@
     <h:body>
         <h:form id="form">
             <h:commandButton value="Display" action="#{carSelectionBean.dispalyInfo()}">
-            <h:selectOneListbox  size="3" value='#{carSelectionBean.cars}'>
-                <f:selectItems value="#{carSelectionBean.getCars()}" var ="car" itemValue="#{car.id}" itemLabel="#{car.name.concat(' ').concat(car.manufacturer)}" noSelectionValue="#{carSelectionBean.getCars()[0]}"/>
-                <f:param name="custType" value="#{carSelectionBean.cars}"/>  
+            <h:selectOneListbox  size="3" value='#{carSelectionBean.carId}'>
+                <f:selectItems value="#{carSelectionBean.cars}" var ="car" itemValue="#{car.id}" itemLabel="#{car.name.concat(' ').concat(car.manufacturer)}" noSelectionValue="#{carSelectionBean.getCars()[0]}"/>
             </h:selectOneListbox >
             </h:commandButton>
         </h:form>
