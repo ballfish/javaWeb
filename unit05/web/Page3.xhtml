@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Page 1</title>
+        <f:metadata>
+            <f:viewParam name="ItemID" value="#{newJSFManagedBean.itemID}" />
+        </f:metadata>
+    </h:head>
+    <h:body>
+        <h1>Page 1</h1>
+        <h:link outcome="/index">Home</h:link>
+        <p>
+            《特殊傳說》是台灣作家護玄所著的輕小說系列，由紅麟繪畫封面繪圖及內頁插圖，同時並把此作改編為漫畫版。
+
+作者目前打算三部完結。[來源請求]於2010年2月，作者推出了與本書相同背景的中短篇小說系列《PARTNERS》，其主角為本作主角褚冥漾的國中同學衛禹，該故事發生時間為本作小說第二部後兩年，故事中以衛禹與新角色擔當主軸，但過程中時不時會出現本傳角色一影。
+        </p>
+        <h:graphicImage library="img" name="#{newJSFManagedBean.itemID}.jpg" />
+    </h:body>
+</html>

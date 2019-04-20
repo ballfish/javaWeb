@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Page 1</title>
+        <f:metadata>
+            <f:viewParam name="ItemID" value="#{newJSFManagedBean.itemID}" />
+        </f:metadata>
+    </h:head>
+    <h:body>
+        <h1>Page 1</h1>
+        <h:link outcome="/index">Home</h:link>
+        <p>
+一顆離奇墜落太平洋的神祕隕石，
+　　使地球在數世紀以來始終陷入長期嚴寒。
+
+　　而在冰封大地與灰暗天空下魔物四處橫行無忌，
+　　殘存的人類要如何在絕境中求生，
+　　並找出延續文明的希望……？
+
+　　陽光，是否真的能護佑人類？
+        </p>
+        <h:graphicImage library="img" name="#{newJSFManagedBean.itemID}.jpg" />
+    </h:body>
+</html>
