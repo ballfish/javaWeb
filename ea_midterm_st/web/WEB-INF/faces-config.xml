@@ -7,12 +7,12 @@
     <navigation-rule>
         <from-view-id>/editCarInfo.xhtml</from-view-id>
         <navigation-case>
-            <from-action>#{newJSFManagedBean.index()}</from-action>
+            <from-action>#{newJSFManagedBean.index}</from-action>
             <from-outcome>home</from-outcome>
             <to-view-id>/index.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-action>#{newJSFManagedBean.updatePrice()}</from-action>
+            <from-action>#{newJSFManagedBean.updatePrice}</from-action>
             <from-outcome>home</from-outcome>
             <to-view-id>/index.xhtml</to-view-id>
         </navigation-case>
