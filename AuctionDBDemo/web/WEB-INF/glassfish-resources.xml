@@ -10,6 +10,5 @@
         <property name="URL" value="jdbc:derby://localhost:1527/AuctionDBDemo"/>
         <property name="driverClass" value="org.apache.derby.jdbc.ClientDriver"/>
     </jdbc-connection-pool>
-    <jdbc-resource enabled="true" jndi-name="java:app/jdbc/AuctionDBDemo" object-type="user" pool-name="derby_net_AuctionDBDemo_appPool"/>
-    <jdbc-resource enabled="true" jndi-name="java:app/jdbc/AuctionDBDemo" object-type="user" pool-name="derby_net_AuctionDBDemo_appPool"/>
+    <jdbc-resource enabled="true" jndi-name="java:app/AuctionDBDemo" object-type="user" pool-name="derby_net_AuctionDBDemo_appPool"/>
 </resources>
