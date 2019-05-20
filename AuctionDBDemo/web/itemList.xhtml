@@ -5,14 +5,16 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
+        <f:metadata> 
+            <f:viewParam name="itemID" value="#{CrudBean.itemUpdateID}"/>
+        </f:metadata>
     </h:head>
     <h:body>
         <h:dataTable value="#{crudBean.findAll()}" var="item">
             <h:column>
-                <!-- column header -->
-                <f:facet name="header">ID</f:facet>
-                <!-- row record -->
-                #{item.id}
+                <h:link value="#{item.id}"  outcome='itemUpdate'>
+                    <f:param name="itemID" value="#{item.id}" />
+                </h:link>
             </h:column>
             <h:column>
                 <f:facet name="header">Image URL</f:facet>
