@@ -6,14 +6,17 @@
     <h:head>
         <title>Facelet Title</title>
         <f:metadata>
+            <f:viewParam name="itemID" value="#{crudBean.itemUpdateID}"></f:viewParam>
             <f:viewAction action="#{crudBean.findItem()}"></f:viewAction>
         </f:metadata>
     </h:head>
     <h:body>
         <h:form>
-            <p>ID：#{CrudBean.item.id}</p>
-            <p>Image URL：<h:inputText value="#{CrudBean.item.image}" ></h:inputText></p>
-            <p>Description：<h:inputText value="#{CrudBean.item.description}" ></h:inputText></p>
+            <p>ID：#{crudBean.item.id}</p>
+            <p>Image URL：<h:inputText value="#{crudBean.item.imgURL}" ></h:inputText></p>
+            <p>Description：<h:inputText value="#{crudBean.item.description}" ></h:inputText></p>
+            <p><h:commandButton value="Update Item" action="#{crudBean.update()}" />
+                <h:commandButton value="Delete Item" action="#{crudBean.delete()}" /></p>
         </h:form>
         <h:link outcome="itemList" value="back  "></h:link>
     </h:body>

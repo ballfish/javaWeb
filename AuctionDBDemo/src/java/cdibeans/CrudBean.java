@@ -11,6 +11,7 @@ import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import java.util.List;
+import java.util.logging.Logger;
 import javax.ejb.EJB;
 
 /**
@@ -27,6 +28,14 @@ public class CrudBean implements Serializable {
     private Item newItem;
     private Item item;
     private Long itemUpdateID;
+
+    public Long getItemUpdateID() {
+        return itemUpdateID;
+    }
+
+    public void setItemUpdateID(Long itemUpdateID) {
+        this.itemUpdateID = itemUpdateID;
+    }
     
     /**
      * Creates a new instance of CrudBean
@@ -67,15 +76,23 @@ public class CrudBean implements Serializable {
     
     public void findItem() {
         this.item = itemFacade.find(itemUpdateID);
-        System.out.print(item);
     }
     
     public Long getitemUpdateID() {
         return itemUpdateID;
     }
 
-    public void setitemUpdateID(Long itemUpdateID) {
-        this.itemUpdateID = itemUpdateID;
+    
+    
+     public String update(){
+        System.out.println(item.getImgURL());
+        System.out.println(item.getDescription());
+        itemFacade.edit(item);
+        return "itemList";
     }
     
+    public String delete(){
+        itemFacade.remove(item);
+        return "itemList";
+    }
 }
